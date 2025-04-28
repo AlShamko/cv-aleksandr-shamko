@@ -4,13 +4,15 @@ import {Menu} from "../../components/menu/Menu.tsx";
 import {Socials} from "../../components/socials/Socials.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 
+const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+
 export const Header = () => {
     return (
 
         <StyledHeader>
             <FlexWrapper justify={"space-between"} align={"center"}>
                 <Logo/>
-                <Menu/>
+                <Menu menuItems={items}/>
                 <Socials/>
             </FlexWrapper>
         </StyledHeader>
@@ -19,7 +21,6 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    position: sticky;
 `
 
 

@@ -9,8 +9,8 @@ export const Main = () => {
                 <TitleMain>Hi 👋,<br/>
                     My name is<br/>
                     Shamko Aleksandr<br/>
-                    I am front end developer</TitleMain>
-
+                    I am front end developer
+                </TitleMain>
                 <PhotoMain src={photo} alt="Foto"/>
             </FlexWrapper>
         </StyledMain>
