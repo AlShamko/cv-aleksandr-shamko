@@ -1,16 +1,23 @@
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/icon.tsx";
 
-export const Project = () => {
+type ProjectPropsType = {
+    title: string;
+    text: string;
+    src: string;
+    stack: string;
+}
+
+export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <ImageProject/>
-            <TitleProject></TitleProject>
-            <TextProject></TextProject>
-            <p></p>
+            <ImageProject src={props.src} alt="Project" />
+            <TitleProject>{props.title}</TitleProject>
+            <TextProject>{props.text}</TextProject>
+            <Stack>{props.stack}</Stack>
             <div>
                 <div>
-                    <Icon iconId={"gitHub"}></Icon>
+                    <Icon iconId={"link"}></Icon>
                     <IconLink>Live Preview</IconLink>
                 </div>
                 <div>
@@ -23,11 +30,14 @@ export const Project = () => {
 };
 
 const StyledProject = styled.div`
-    
+    max-width: 375px;
+    width: 100%;
 `
 
 const ImageProject = styled.img`
-
+    max-width: 375px;
+    height: 260px;
+    width: 100%;
 `
 
 const TitleProject = styled.h3`
@@ -35,6 +45,9 @@ const TitleProject = styled.h3`
 `
 
 const TextProject = styled.p`
+
+`
+const Stack = styled.p`
 
 `
 
